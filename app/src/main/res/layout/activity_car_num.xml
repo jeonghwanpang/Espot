@@ -60,6 +60,8 @@
         android:fontFamily="sans-serif-black"
         android:text="확인"
         android:textSize="20sp"
+        android:background="@drawable/main_button"
+        android:backgroundTint="#ff9a9a"
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="627dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -5,15 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class User_Main extends AppCompatActivity {
+public class manager extends AppCompatActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_main);
+        setContentView(R.layout.activity_manager);
 
         Button naverButton = (Button) findViewById(R.id.homebutton);
         naverButton.setOnClickListener(new View.OnClickListener() {

@@ -51,8 +51,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.76" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="174dp"
         android:layout_height="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,9 +59,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.19999999"
-        app:srcCompat="@drawable/icon" />
+        android:src="@drawable/espotmascot" />
 
-<!--    <androidx.appcompat.widget.SwitchCompat-->
+
+    <!--    <androidx.appcompat.widget.SwitchCompat-->
 <!--        android:id="@+id/switchButton"-->
 <!--        android:layout_width="300dp"-->
 <!--        android:layout_height="50dp"-->
