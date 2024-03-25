@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
@@ -23,7 +24,8 @@
     <Button
         android:id="@+id/naverbutton"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ellips_button"
         android:backgroundTint="#A3E558"
         android:text="NAVER"
         android:textColor="#000000"
@@ -32,12 +34,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.662" />
 
     <Button
-        android:id="@+id/kakaovbutton"
+        android:id="@+id/kakaobutton"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:background="@drawable/ellips_button"
         android:backgroundTint="#FFEB3B"
         android:text="KAKAO"
         android:textColor="#000000"
@@ -46,7 +49,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -54,29 +57,56 @@
         android:layout_height="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243"
+        app:layout_constraintVertical_bias="0.19999999"
         app:srcCompat="@drawable/icon" />
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switchButton"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:textOff="사용자 로그인"
-        android:textOn="관리자 로그인"
-        android:thumb="@drawable/switch_thumb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565"
-        app:showText="true"
-        app:track="@drawable/switch_track"
-        app:trackTint="@null"
-        app:thumbTint="@null"/>
+<!--    <androidx.appcompat.widget.SwitchCompat-->
+<!--        android:id="@+id/switchButton"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:gravity="center"-->
+<!--        android:textOff="사용자 로그인"-->
+<!--        android:textOn="관리자 로그인"-->
+<!--        android:thumb="@drawable/switch_thumb"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.495"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.565"-->
+<!--        app:showText="true"-->
+<!--        app:track="@drawable/switch_track"-->
+<!--        app:trackTint="@null"-->
+<!--        app:thumbTint="@null"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/views"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:paddingTop="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/bg_on"
+            tools:ignore="RtlSymmetry"
+            android:paddingLeft="15dp" android:paddingRight="10dp"/>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
