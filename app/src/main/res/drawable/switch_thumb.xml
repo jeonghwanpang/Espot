@@ -3,23 +3,23 @@
 
     <item android:state_checked="true">
         <shape android:shape="rectangle">
-            <solid android:color="#ff638e"/>
+            <solid android:color="#ff9a9a"/>
             <size android:width="150dp"
                 android:height="40dp"/>
             <corners android:radius="40dp"/>
             <stroke android:width="2dp"
-                android:color="#ff638e"/>
+                android:color="#ff9a9a"/>
         </shape>
     </item>
 
     <item android:state_checked="false">
         <shape android:shape="rectangle">
-            <solid android:color="#ff638e"/>
+            <solid android:color="#ff9a9a"/>
             <size android:width="150dp"
                 android:height="40dp"/>
             <corners android:radius="40dp"/>
             <stroke android:width="2dp"
-                android:color="#ff638e"/>
+                android:color="#ff9a9a"/>
         </shape>
     </item>
 
