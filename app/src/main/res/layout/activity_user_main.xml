@@ -38,13 +38,13 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:id="@+id/findbutton"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
         android:background="@drawable/main_button"
-        android:backgroundTint="#ff9a9a"
+        android:backgroundTint="#FFC8C8"
         android:text="충전소 찾기"
-        android:textSize="40dp"
+        android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -53,13 +53,13 @@
         app:layout_constraintVertical_bias="0.232" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:id="@+id/checkcgbutton"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
         android:background="@drawable/main_button"
-        android:backgroundTint="#ff9a9a"
+        android:backgroundTint="#FFC8C8"
         android:text="사용 가능한 \n충전기 확인"
-        android:textSize="40dp"
+        android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,12 +67,12 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
         android:background="@drawable/main_button"
-        android:backgroundTint="#ff9a9a"
+        android:backgroundTint="#FFC8C8"
         android:text="남은 시간 확인"
-        android:textSize="40dp"
+        android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="ESpot"
-        android:textSize="48sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"

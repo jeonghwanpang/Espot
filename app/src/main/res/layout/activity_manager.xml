@@ -9,12 +9,12 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="320dp"
-        android:layout_height="130dp"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
         android:background="@drawable/main_button"
-        android:backgroundTint="#ff9a9a"
+        android:backgroundTint="#FFC8C8"
         android:text="실시간 영상 확인"
-        android:textSize="40dp"
+        android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Espot"
-        android:textSize="48sp"
+        android:textSize="40sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
