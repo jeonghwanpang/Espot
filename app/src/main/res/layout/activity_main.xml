@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.395" />
 
     <Button
-        android:id="@+id/naverbutton"
+        android:id="@+id/LoginButton"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:background="@drawable/ellips_button"
@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.766" />
 
     <Button
-        android:id="@+id/kakaobutton"
+        android:id="@+id/JoinButton"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:background="@drawable/ellips_button"
