@@ -15,11 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class setting extends AppCompatActivity {
 
-    Switch switcher;
-    boolean nightMODE;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
