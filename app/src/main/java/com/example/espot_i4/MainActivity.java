@@ -38,26 +38,24 @@ public class MainActivity extends AppCompatActivity {
         mBtnRegister = findViewById(R.id.JoinButton);
         mBtnLogin = findViewById(R.id.LoginButton);
 
-        /*
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String strID = mEtID.getText().toString();
                 String strPwd = mEtPwd.getText().toString();
-                String strName = mEtName.getText().toString();
-                String strPhone = mEtPhone.getText().toString();
-                String strCar1 = mEtCar1.getText().toString();
-                String strCar2 = mEtCar2.getText().toString();
-                //String strAdminNum = mEtAdminNum.getText().toString();
 
                 mFirebaseAuth.signInWithEmailAndPassword(strID, strPwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // 로그인 성공
-                            Intent intent = new Intent(MainActivity.this, User_Main.class);
-                            startActivity(intent);
-                            finish();
+                        if (task.isSuccessful()){
+                            Button loginButton = (Button) findViewById(R.id.LoginButton);
+                            loginButton.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View view){
+                                    //화면 전환
+                                    Intent intent = new Intent(getApplicationContext(), User_Main.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else {
                             Toast.makeText(MainActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
                         }
@@ -66,21 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        */
-
-
-
-
-        Button findButton = (Button) findViewById(R.id.LoginButton);
-        findButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
-                Intent intent = new Intent(getApplicationContext(), User_Main.class);
-                startActivity(intent);
-            }
-        });
-
-
 
         //<사용자 로그인> 회원 가입 버튼 누를 시 사용자 모드 회원 가입 화면으로 전환
         Button joinButton = (Button) findViewById(R.id.JoinButton);

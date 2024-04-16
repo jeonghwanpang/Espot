@@ -12,7 +12,7 @@
         android:layout_width="280dp"
         android:layout_height="100dp"
         android:background="@drawable/main_button"
-        android:backgroundTint="#FFC8C8"
+        android:backgroundTint="#91D8F8"
         android:text="실시간 영상 확인"
         android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
