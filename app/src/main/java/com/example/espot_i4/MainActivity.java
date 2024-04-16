@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRegister = findViewById(R.id.JoinButton);
         mBtnLogin = findViewById(R.id.LoginButton);
 
+        /*
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+        */
+
+
+
+
+        Button findButton = (Button) findViewById(R.id.LoginButton);
+        findButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                //화면 전환
+                Intent intent = new Intent(getApplicationContext(), User_Main.class);
+                startActivity(intent);
             }
         });
 

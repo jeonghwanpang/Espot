@@ -44,5 +44,15 @@ public class User_Main extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 설정 버튼
+        Button settingButton = (Button) findViewById(R.id.settingbutton);
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                //화면 전환
+                Intent intent = new Intent(getApplicationContext(), setting.class);
+                startActivity(intent);
+            }
+        });
     }
 }

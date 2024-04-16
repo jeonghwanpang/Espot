@@ -43,8 +43,10 @@
         android:layout_height="100dp"
         android:background="@drawable/main_button"
         android:backgroundTint="#FFC8C8"
+        android:elevation="50dp"
         android:text="충전소 찾기"
         android:textSize="28dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
