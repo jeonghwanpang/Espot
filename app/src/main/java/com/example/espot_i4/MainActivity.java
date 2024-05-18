@@ -16,6 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 토글버튼 이벤트
+        // SwitchCompat 찾기
+        SwitchCompat switchCompat = findViewById(R.id.switchButton);
+
+        // 버튼 클릭 이벤트 리스너 등록
+        findViewById(R.id.LoginButton).setOnClickListener(view -> {
+            if (switchCompat.isChecked()) {
+                // Switch가 '관리자 로그인' 상태일 때
+                Intent intent = new Intent(MainActivity.this, manager.class);
+                startActivity(intent);
+            } else {
+                // Switch가 '사용자 로그인' 상태일 때
+                Intent intent = new Intent(MainActivity.this, User_Main.class);
+                startActivity(intent);
+            }
+        });
+
+        // 회원가입 버튼에 대한 이벤트 처리
+        findViewById(R.id.JoinButton).setOnClickListener(view -> {
+            // 회원가입 화면으로 이동하는 코드
+            if (switchCompat.isChecked()) {
+                // Switch가 '관리자 로그인' 상태일 때
+                Intent intent = new Intent(MainActivity.this, RegisterActivity_Admin.class);
+                startActivity(intent);
+            } else {
+                // Switch가 '사용자 로그인' 상태일 때
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        /*
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
 
@@ -75,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         /*
         // 임시
