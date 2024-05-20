@@ -9,6 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class UserAccount extends AppCompatActivity {
+
+
+
     public UserAccount() {
 
     }
@@ -63,6 +66,10 @@ public class UserAccount extends AppCompatActivity {
     public void setAdminNum(String adminNum) { this.adminNum = adminNum; }
 
     private String adminNum;
+
+    public String getRole() {return role;}
+    public void setRole(String tole) { this.role = role; }
+    private String role; // 사용자 역할
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

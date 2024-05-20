@@ -30,7 +30,7 @@
             android:name=".find_cs"
             android:exported="false" />
         <activity
-            android:name=".manager"
+            android:name=".Manager"
             android:exported="false" />
         <activity
             android:name=".User_Main"
