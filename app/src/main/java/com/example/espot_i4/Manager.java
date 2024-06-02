@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,9 +20,18 @@ public class Manager extends AppCompatActivity {
             public void onClick(View view){
                 //화면 전환
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //Intent intent = new Intent(getApplicationContext(), User_Main.class);
                 startActivity(intent);
             }
         });
+
+        // CCTV URL 연결
+        Button CCTVBtn = (Button) findViewById(R.id.CCTVButton);
+        CCTVBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://172.30.1.61/"));
+                startActivity(myIntent);
+            }
+        });
+
     }
 }
