@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.w3c.dom.Text;
+
 public class TimerActivity extends AppCompatActivity {
 
     private TextView countdownText; // 타이머 현황
@@ -21,9 +23,9 @@ public class TimerActivity extends AppCompatActivity {
     private Button stopButton; // 정지버튼
     private Button cancleButton; //취소버튼
 
-    private EditText hourText; // 시
-    private EditText minText; // 분
-    private EditText secondText; // 초
+    private TextView hourText; // 시
+    private TextView minText; // 분
+    private TextView secondText; // 초
 
     private CountDownTimer countDownTimer;
 

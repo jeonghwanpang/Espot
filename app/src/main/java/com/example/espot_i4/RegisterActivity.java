@@ -1,6 +1,7 @@
 package com.example.espot_i4;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import androidx.appcompat.widget.Toolbar;
+
 public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth; // 파이어 베이스 연동
     private DatabaseReference mDatabaseRef; // 실시간 데이터 베이스
@@ -37,6 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // 툴바
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // 뒤로가기 버튼 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
@@ -82,5 +93,15 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    // 툴바
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // 뒤로가기 버튼 클릭 시 동작
+            finish(); // 현재 액티비티 종료
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -3,6 +3,7 @@ package com.example.espot_i4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import androidx.appcompat.widget.Toolbar;
+
 public class RegisterActivity_Admin extends AppCompatActivity {
     private static final String TAG = "RegisterActivity_Admin";
 
@@ -41,6 +44,14 @@ public class RegisterActivity_Admin extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // 툴바
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // 뒤로가기 버튼 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
@@ -112,5 +123,15 @@ public class RegisterActivity_Admin extends AppCompatActivity {
         public void setPassword(String password) { this.password = password; }
         public String getRole() { return role; }
         public void setRole(String role) { this.role = role; }
+    }
+
+    // 툴바
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // 뒤로가기 버튼 클릭 시 동작
+            finish(); // 현재 액티비티 종료
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

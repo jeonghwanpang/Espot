@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:text="관리자 모드 회원가입"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,10 +143,19 @@
         android:layout_width="250dp"
         android:layout_height="55dp"
         android:layout_marginBottom="50dp"
-        android:backgroundTint="#91D8F8"
+        android:backgroundTint="#CBBDF1"
         android:text="가입"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFEAEA"
+        app:title="Espot"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
