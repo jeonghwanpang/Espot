@@ -106,11 +106,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // find_cs 액티비티로 이동하는 버튼 추가
-        Button findCSButton = findViewById(R.id.findCSButton);
-        findCSButton.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, find_cs.class);
-            startActivity(intent);
-        });
     }
 }

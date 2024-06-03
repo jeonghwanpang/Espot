@@ -11,6 +11,7 @@
         android:id="@+id/editTextText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint=""
@@ -18,7 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextText4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchButton" />
 
     <TextView
         android:id="@+id/textView5"
@@ -59,14 +61,13 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/baloo"
         android:text="ESpot"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
     <Button
         android:id="@+id/LoginButton"
@@ -80,9 +81,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/JoinButton"
@@ -95,43 +94,35 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
         android:layout_width="174dp"
         android:layout_height="168dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/espotmascot"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:textOff="사용자 로그인"
         android:textOn="관리자 로그인"
         android:thumb="@drawable/switch_thumb"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493"
+        app:layout_constraintTop_toBottomOf="@+id/text"
         app:showText="true"
         app:thumbTint="@null"
         app:track="@drawable/switch_track"
         app:trackTint="@null" />
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -144,13 +135,6 @@
         app:layout_constraintTop_toBottomOf="@id/text">
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/anotherView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Another View"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
     <Button
         android:id="@+id/findCSButton"
         android:layout_width="wrap_content"
