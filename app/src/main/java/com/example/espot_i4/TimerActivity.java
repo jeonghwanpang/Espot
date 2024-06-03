@@ -13,6 +13,8 @@ import androidx.appcompat.widget.Toolbar; // Toolbar를 사용하기 위해 추�
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.DialogInterface;
+import androidx.appcompat.app.AlertDialog;
 
 import org.w3c.dom.Text;
 
@@ -121,6 +123,22 @@ public class TimerActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(TimerActivity.this);
+                builder.setTitle("시간 종료"); // 팝업창 제목 설정
+                builder.setMessage("충전이 완료되었습니다."); // 팝업창 메시지 설정
+                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // '확인' 버튼 클릭 시 수행할 동작
+                        // 예를 들어, 타이머 설정 화면으로 돌아가는 등의 동작을 구현
+                        setting.setVisibility(View.VISIBLE); // 설정 화면 보이기
+                        timer.setVisibility(View.GONE); // 타이머 화면 숨기기
+                        firstState = true; // 타이머 초기 상태로 설정
+                        stopTimer(); // 타이머 정지
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         }.start();
 
