@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth; // 파이어베이스 인증
     private DatabaseReference mDatabaseRef; // 파이어베이스 실시간 데이터베이스 참조
     private EditText mEtID, mEtPwd;
-    private Button mBtnRegister, mBtnLogin;
+    private Button mBtnRegister, mBtnLogin, findCSButton;
     private SwitchCompat switchCompat; // 토글 버튼 추가
 
     @Override
@@ -102,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
+        });
+
+        // find_cs 액티비티로 이동하는 버튼 추가
+        Button findCSButton = findViewById(R.id.findCSButton);
+        findCSButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, find_cs.class);
+            startActivity(intent);
         });
     }
 }
