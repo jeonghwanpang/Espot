@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
@@ -26,8 +26,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="64dp"
         android:text="PW"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/LoginButton"
@@ -37,7 +37,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="80dp"
         android:layout_marginBottom="28dp"
         android:text="ID"
         android:textSize="20dp"
@@ -46,8 +46,8 @@
 
     <EditText
         android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="55dp"
         android:ems="10"
         android:hint=""
@@ -149,5 +149,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    <!-- Add the new Button here -->
-    <!-- Add the new Button here -->
