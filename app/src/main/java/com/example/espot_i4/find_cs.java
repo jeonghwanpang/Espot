@@ -56,6 +56,7 @@ public class find_cs extends AppCompatActivity {
                 // WebView가 뒤로 갈 수 없다면, Activity를 종료합니다.
                 finish();
             }
+
         });
     }
 }
