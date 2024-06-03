@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnRegister, mBtnLogin, findCSButton;
     private SwitchCompat switchCompat; // 토글 버튼 추가
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -8,6 +8,14 @@
     android:orientation="vertical"
     tools:context=".TimerActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="타이머"
+        app:titleTextColor="@android:color/white" />
+
     <FrameLayout
         android:id="@+id/setting"
         android:layout_width="match_parent"

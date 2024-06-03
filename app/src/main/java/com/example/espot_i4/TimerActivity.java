@@ -2,13 +2,14 @@ package com.example.espot_i4;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar; // Toolbar를 사용하기 위해 추가
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -34,11 +35,18 @@ public class TimerActivity extends AppCompatActivity {
 
     FrameLayout setting; // 셋팅화면
     FrameLayout timer; // 타이머 화면
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_timer);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // 뒤로가기 버튼 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -62,8 +70,8 @@ public class TimerActivity extends AppCompatActivity {
             public void onClick(View v){
                 firstState = true;
 
-                setting.setVisibility(setting.GONE);
-                timer.setVisibility(timer.VISIBLE);
+                setting.setVisibility(View.GONE);
+                timer.setVisibility(View.VISIBLE);
                 startStop();
             }
         });
@@ -76,8 +84,8 @@ public class TimerActivity extends AppCompatActivity {
         cancleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setting.setVisibility(setting.VISIBLE); // 설정 생김
-                timer.setVisibility(timer.GONE); // 타이머 사라짐
+                setting.setVisibility(View.VISIBLE); // 설정 생김
+                timer.setVisibility(View.GONE); // 타이머 사라짐
                 firstState = true;
                 stopTimer();
             }
@@ -139,5 +147,14 @@ public class TimerActivity extends AppCompatActivity {
         timeLeftText += seconds;
 
         countdownText.setText(timeLeftText);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // 뒤로가기 버튼 클릭 시 동작
+            finish(); // 현재 액티비티 종료
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
