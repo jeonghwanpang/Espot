@@ -2,8 +2,10 @@ package com.example.espot_i4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import androidx.appcompat.widget.Toolbar;
 import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,14 +17,12 @@ public class Manager extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager);
 
-        Button naverButton = (Button) findViewById(R.id.homebutton);
-        naverButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // 뒤로가기 버튼 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // CCTV URL 연결
         Button CCTVBtn = (Button) findViewById(R.id.CCTVButton);
@@ -32,6 +32,15 @@ public class Manager extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // 뒤로가기 버튼 클릭 시 동작
+            finish(); // 현재 액티비티 종료
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

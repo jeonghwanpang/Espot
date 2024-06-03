@@ -2,14 +2,11 @@ package com.example.espot_i4;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.net.Uri; // 지도 API 연결
-
+import androidx.appcompat.widget.Toolbar;
+import android.net.Uri;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,47 +17,24 @@ public class User_Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_main);
 
-        // 충전소 찾기
-        Button findButton = (Button) findViewById(R.id.ChargeButton);
-        findButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
-                Intent intent = new Intent(getApplicationContext(), find_cs.class);
-                startActivity(intent);
-            }
-        });
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        // 홈 버튼
-        Button homeButton = (Button) findViewById(R.id.homebutton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        // 뒤로가기 버튼 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        // 설정 버튼
-        Button settingButton = (Button) findViewById(R.id.settingbutton);
-        settingButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
-                Intent intent = new Intent(getApplicationContext(), setting.class);
-                startActivity(intent);
-            }
-        });
-
-        // 남은 시간 확인
+        // 남은 시간 확인 버튼 이벤트
         Button TimerButton = (Button) findViewById(R.id.TimerButton);
         TimerButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view){
-                //화면 전환
+            public void onClick(View view) {
+                // 화면 전환
                 Intent intent = new Intent(getApplicationContext(), TimerActivity.class);
                 startActivity(intent);
             }
         });
 
-        // 지도 URL 연결
+        // 지도 URL 연결 버튼 이벤트
         Button ChargeBtn = (Button) findViewById(R.id.ChargeButton);
         ChargeBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -68,6 +42,15 @@ public class User_Main extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // 뒤로가기 버튼 클릭 시 동작
+            finish(); // 현재 액티비티 종료
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

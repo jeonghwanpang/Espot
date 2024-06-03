@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".Manager">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFEAEA"
+        app:title="Espot"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/CCTVButton"
         android:layout_width="280dp"
@@ -19,15 +28,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Espot"
-        android:textSize="35sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
